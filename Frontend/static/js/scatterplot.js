@@ -8,7 +8,7 @@ function init() {
   // Don't need these below but they could be used in a dynamic manner instead of
   // manually inserting the parameters via the queryUrl
 
-  
+
   // var dropdownMenu = d3.select("#selDataset1");
   // // Assign the value of the dropdown menu option to a variable
   // var yearSelected = dropdownMenu.property("value");
@@ -23,14 +23,18 @@ function init() {
   console.log(queryUrl);
 
   d3.json(queryUrl).then(function (response) {
-    var x_data = response.x_data
-    var y_data = response.y_data
-    var x_category = response.x_category
-    var reg_values = response.reg_values
-    var line_eq = response.line_eq
-    var countries = response.countries
-    var year = response.year
-    var rvalue = response.r_value
+    var x_data = response.x_data;
+    var y_data = response.y_data;
+    const x_category_base = response.x_category.replaceAll("_", " ")
+    const words = x_category_base.split(" ");
+    x_category = words.map((word) => {
+      return word[0].toUpperCase() + word.substring(1);
+    }).join(" ");
+    var reg_values = response.reg_values;
+    var line_eq = response.line_eq;
+    var countries = response.countries;
+    var year = response.year;
+    var rvalue = response.r_value;
 
     var trace1 = {
       x: x_data,
@@ -47,10 +51,10 @@ function init() {
       mode: 'lines',
       type: 'line',
       name: `Regression Line: ${line_eq}`
-    }
+    };
     var layout = {
       title: `${year} Happiness Score vs ${x_category}`
-    }
+    };
     data = [trace1, trace2];
 
     Plotly.newPlot("plot", data, layout);
@@ -101,15 +105,17 @@ function updatePlotly() {
   d3.json(queryUrl).then(function (response) {
     var x_data = response.x_data
     var y_data = response.y_data
-    var x_category = response.x_category
+    const x_category_base = response.x_category.replaceAll("_", " ")
+    const words = x_category_base.split(" ");
+    x_category = words.map((word) => {
+      return word[0].toUpperCase() + word.substring(1);
+    }).join(" ");
+
     var reg_values = response.reg_values
     var line_eq = response.line_eq
     var countries = response.countries
     var year = response.year
     var rvalue = response.r_value
-
-    console.log(x_data)
-    console.log(y_data)
     // update = {
     //   x: [x_data],
     //   y: [y_data],
@@ -133,7 +139,19 @@ function updatePlotly() {
       name: `Regression Line: ${line_eq}`
     }
     var layout = {
-      title: `${year} Happiness Score vs ${x_category}`
+      title: {
+        text: `${year} Happiness Score vs ${x_category}`
+      },
+      xaxis: {
+        title: {
+          text: 'Year',
+          font: {
+            family: 'Helvetica, sans-serif',
+            size: 18,
+            color: '#000000'
+          }
+        }
+      },
     }
     data = [trace1, trace2];
     // var x = response.x_data
