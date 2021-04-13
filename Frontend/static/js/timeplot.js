@@ -4,7 +4,7 @@ function init() {
   // Don't need these below but they could be used in a dynamic manner instead of
   // manually inserting the parameters via the queryUrl
 
-  
+
   // var dropdownMenu = d3.select("#selDataset1");
   // // Assign the value of the dropdown menu option to a variable
   // var yearSelected = dropdownMenu.property("value");
@@ -30,16 +30,44 @@ function init() {
     };
 
     var layout = {
-      title: `${country} Happiness Score Over Time`,
+      title: {
+        text: `${country} Happiness Score Over Time`,
+        font: {
+          family: 'Helvetica, sans-serif',
+          size: 24,
+          color: '#000000'
+        }
+      },
+      xaxis: {
+        title: {
+          text: 'Year',
+          font: {
+            family: 'Helvetica, sans-serif',
+            size: 18,
+            color: '#000000'
+          }
+        }
+      },
+      yaxis: {
+        title: {
+          text: "Happiness Score",
+          font: {
+            family: 'Helvetica, sans-serif',
+            size: 18,
+            color: '#000000'
+          }
+        }
+      }
       // width: 1000,
       // height: 750
     }
+
     data = [trace1];
 
     Plotly.newPlot("line-plot", data, layout);
 
     // append options to the year dropdown
-    
+
 
     //do the same as before for countries
     d3.json(url + "/country_list").then(function (data) {
@@ -80,7 +108,34 @@ function updateLine() {
     };
 
     var layout = {
-      title: `${country} Happiness Score Over Time`,
+      title: {
+        text: `${country} Happiness Score Over Time`,
+        font: {
+          family: 'Helvetica, sans-serif',
+          size: 24,
+          color: '#000000'
+        }
+      },
+      xaxis: {
+        title: {
+          text: 'Year',
+          font: {
+            family: 'Helvetica, sans-serif',
+            size: 18,
+            color: '#000000'
+          }
+        }
+      },
+      yaxis: {
+        title: {
+          text: "Happiness Score",
+          font: {
+            family: 'Helvetica, sans-serif',
+            size: 18,
+            color: '#000000'
+          }
+        }
+      }
       // width: 1000,
       // height: 750
     }
