@@ -53,7 +53,29 @@ function init() {
       name: `Regression Line: ${line_eq}`
     };
     var layout = {
-      title: `${year} Happiness Score vs ${x_category}`
+      title: {
+        text: `${year} Happiness Score vs ${x_category}`
+      },
+      xaxis: {
+        title: {
+          text: `${x_category}`,
+          font: {
+            family: 'Helvetica, sans-serif',
+            size: 18,
+            color: '#000000'
+          }
+        }
+      },
+      yaxis: {
+        title: {
+          text: "Happiness Score",
+          font: {
+            family: 'Helvetica, sans-serif',
+            size: 18,
+            color: '#000000'
+          }
+        }
+      }
     };
     data = [trace1, trace2];
 
@@ -144,7 +166,7 @@ function updatePlotly() {
       },
       xaxis: {
         title: {
-          text: 'Year',
+          text: `${x_category}`,
           font: {
             family: 'Helvetica, sans-serif',
             size: 18,
@@ -152,6 +174,16 @@ function updatePlotly() {
           }
         }
       },
+      yaxis: {
+        title: {
+          text: "Happiness Score",
+          font: {
+            family: 'Helvetica, sans-serif',
+            size: 18,
+            color: '#000000'
+          }
+        }
+      }
     }
     data = [trace1, trace2];
     // var x = response.x_data
