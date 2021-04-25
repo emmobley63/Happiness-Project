@@ -143,10 +143,9 @@ html {
   width: 80vw
 }
 
-/* .scat-plot {
-  width: 1000px;
-  height: 800px;
-} */
+.scat-plot {
+  color: black
+}
 
 
 

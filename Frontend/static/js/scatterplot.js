@@ -35,8 +35,6 @@ function init() {
     var countries = response.countries;
     var year = response.year;
     var rvalue = response.r_value;
-    // Testing for functionality iframe-scatter
-    console.log(x_category_base)
 
     var trace1 = {
       x: x_data,
@@ -80,8 +78,9 @@ function init() {
       }
     };
     data = [trace1, trace2];
+    var config = {responsive: true};
 
-    Plotly.newPlot("plot", data, layout);
+    Plotly.newPlot("plot", data, layout, config);
 
     // append options to the year dropdown
     d3.json(url + "/year_list").then(function (data) {
@@ -194,14 +193,7 @@ function updatePlotly() {
     // var y_title = response.y_category
     // data = [x, y]
     Plotly.react("plot", data, layout);
-    // Plotly.restyle("plot", "y", [y]);
   });
-  // Initialize x and y arrays
-  // var x = [];
-  // var y = [];
-  // Note the extra brackets around 'x' and 'y'
-  //Plotly.restyle("plot", "x", [x]);
-  // Plotly.restyle("plot", "y", [y]);
 }
 init(
 );
