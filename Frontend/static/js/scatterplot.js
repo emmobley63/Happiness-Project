@@ -35,6 +35,8 @@ function init() {
     var countries = response.countries;
     var year = response.year;
     var rvalue = response.r_value;
+    // Testing for functionality iframe-scatter
+    console.log(x_category_base)
 
     var trace1 = {
       x: x_data,

@@ -139,9 +139,14 @@ html {
 }
 
 .map-row {
-  height: 40vw;
+  height: 50vw;
   width: 80vw
 }
+
+/* .scat-plot {
+  width: 1000px;
+  height: 800px;
+} */
 
 
 
