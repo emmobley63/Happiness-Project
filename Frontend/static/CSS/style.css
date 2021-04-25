@@ -139,8 +139,12 @@ html {
 }
 
 .map-row {
-  height: 40vw;
+  height: 50vw;
   width: 80vw
+}
+
+.scat-plot {
+  color: black
 }
 
 
