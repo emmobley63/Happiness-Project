@@ -135,7 +135,8 @@ body {
 body,
 html {
   height: 100%;
-  background-color: #f7f1cb; 
+  background-color: #ffffff; 
+  /* background-color: #f7f1cb; */
 }
 
 .map-row {
