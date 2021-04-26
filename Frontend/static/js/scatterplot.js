@@ -25,10 +25,15 @@ function init() {
   d3.json(queryUrl).then(function (response) {
     var x_data = response.x_data;
     var y_data = response.y_data;
-    const x_category_base = response.x_category.replaceAll("_", " ")
-    const words = x_category_base.split(" ");
+    const words = response.x_category.split("_");
     x_category = words.map((word) => {
-      return word[0].toUpperCase() + word.substring(1);
+      if (word == "gdp") {
+        return word.toUpperCase();
+      } else if (word == "per") {
+        return word;
+      } else {
+        return word[0].toUpperCase() + word.substring(1);
+      };
     }).join(" ");
     var reg_values = response.reg_values;
     var line_eq = response.line_eq;
@@ -78,7 +83,7 @@ function init() {
       }
     };
     data = [trace1, trace2];
-    var config = {responsive: true};
+    var config = { responsive: true };
 
     Plotly.newPlot("plot", data, layout, config);
 
@@ -95,14 +100,24 @@ function init() {
     //do the same as before for countries
     d3.json(url + "/x_category").then(function (data) {
       // do d3 append option into dropdown menu
-      var x_category = data.x_categories;
+      var x_underscore_category = data.x_categories;
       var dropdown = d3.select("#selDataset2");
-      for (var i = 0; i < x_category.length; i++) {
-        dropdown.append("option").attr('value', x_category[i]).text(x_category[i]);
+      for (var i = 0; i < x_underscore_category.length; i++) {
+        const base = x_underscore_category[i].split("_");
+        x_category = base.map((word) => {
+          if (word == "gdp") {
+            return word.toUpperCase();
+          } else if (word == "per") {
+            return word;
+          } else {
+            return word[0].toUpperCase() + word.substring(1);
+          };
+        }).join(" ");
+        dropdown.append("option").attr('value', x_underscore_category[i]).text(x_category)
       }
-    })
+    });
   })
-}
+};
 
 // Call updatePlotly() when a change takes place to the DOM
 d3.selectAll("#selDataset1").on("change", updatePlotly);
