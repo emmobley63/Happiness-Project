@@ -39,7 +39,7 @@ function init() {
     var line_eq = response.line_eq;
     var countries = response.countries;
     var year = response.year;
-    var rvalue = response.r_value;
+    var rvalue = response.r_value.toFixed(2);
 
     var trace1 = {
       x: x_data,
@@ -55,11 +55,11 @@ function init() {
       y: reg_values,
       mode: 'lines',
       type: 'line',
-      name: `Regression Line: ${line_eq}`
+      name: `Regression:<br>${line_eq}`
     };
     var layout = {
       title: {
-        text: `${year} Happiness Score vs ${x_category}`
+        text: `${year} Happiness Score vs ${x_category}: r-value = ${rvalue}`
       },
       xaxis: {
         title: {
@@ -149,11 +149,11 @@ function updatePlotly() {
       return word[0].toUpperCase() + word.substring(1);
     }).join(" ");
 
-    var reg_values = response.reg_values
-    var line_eq = response.line_eq
-    var countries = response.countries
-    var year = response.year
-    var rvalue = response.r_value
+    var reg_values = response.reg_values;
+    var line_eq = response.line_eq;
+    var countries = response.countries;
+    var year = response.year;
+    var rvalue = response.r_value.toFixed(2);
     // update = {
     //   x: [x_data],
     //   y: [y_data],
@@ -174,11 +174,11 @@ function updatePlotly() {
       y: reg_values,
       mode: 'lines',
       type: 'line',
-      name: `Regression Line: ${line_eq}`
+      name: `Regression:<br>${line_eq}`
     }
     var layout = {
       title: {
-        text: `${year} Happiness Score vs ${x_category}`
+        text: `${year} Happiness Score vs ${x_category}: r-value= ${rvalue}`
       },
       xaxis: {
         title: {
