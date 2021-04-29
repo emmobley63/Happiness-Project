@@ -1,4 +1,7 @@
 /* Body */
+h2 {
+  color: #474849;
+}
 body{
   background-color: #f7f1cb; 
 
@@ -29,7 +32,7 @@ body{
   background-color:#E7E7E7 !important; 
 }
 a{
-  color: #40464d;
+  color: #212325;
   font-size: 15px; 
 }
 .nav-link:hover{
@@ -150,6 +153,11 @@ html {
 
 .plot-text {
   color: black
+}
+
+.spacer {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 /* Body */
