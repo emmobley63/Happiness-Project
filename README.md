@@ -42,6 +42,6 @@ Our third visualization, located on the "Happiness over time" page, displays the
 
 Evan Mobley | [Evan's LinkedIn](https://www.linkedin.com/in/evanmmobley/) | [Evan's Github](https://github.com/emmobley63) | [emmobley63@gmail.com](mailto:emmobley63@gmail.com)
 
-Paul Anderson | [Paul's LinkedIn](https://www.linkedin.com/in/paul-anderson-1426b340/) | [Paul's Github](https://github.com/pander1405)
+Paul Anderson | [Paul's LinkedIn](https://www.linkedin.com/in/paul-anderson-1426b340/) | [Paul's Github](https://github.com/pander1405) | [paulanderson1991@gmail.com](mailto:paulanderson1991@gmail.com)
 
-Shreya Bakshi | [Shreya's LinkedIn](https://www.linkedin.com/in/shreya-bakshi/) | [Shreya's Github](https://github.com/bakshishreya)
+Shreya Bakshi | [Shreya's LinkedIn](https://www.linkedin.com/in/shreya-bakshi/) | [Shreya's Github](https://github.com/bakshishreya) | [bakshishreya@gmail.com](mailto:bakshishreya@gmail.com)
