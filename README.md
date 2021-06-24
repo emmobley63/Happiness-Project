@@ -3,7 +3,7 @@
 <h2>Why are you happy or not happy?</h2> 
 <p>Is my happiness level normal? Are my fellow compatriots happy? What's the happiest country? What makes them so happy? Freedom? Health? Trust in government? Are happiness levels increasing or decreasing in my country?</p>
 
-<p>If you have any of these same questions, explore here! I know what you're thinking, "All these happiness questions... It sounds like a-." No, this isn't a bad drug infomercial prescribing you a drug with life debilitating side effects, it's an exploration of world happiness data. Side effects include deeper understanding of global happiness and a curiousity to explore more!</p>
+<p>If you have any of these same questions, explore here! we know what you're thinking, "All these happiness questions... It sounds like a-." No, this isn't a bad drug infomercial prescribing you a drug with life debilitating side effects, it's an exploration of world happiness data. Side effects include deeper understanding of global happiness and a curiousity to explore more!</p>
 <br>
 
 <h2>Intro</h2>
@@ -23,8 +23,21 @@ For our country temperature measurement data (which we later decided not to use)
 <h2>Flask and Javascript</h2>
 <p>We used Flask to create a server that accepted user interaction and accessed end routes that fed data back to the user. Our fields were autofilled by the data that was pulled from SQL by Flask and SQLalchemy and pushed to the endpoint. When a user clicks an option we used d3 event listeners to update the visualizations.</p>
 
+<h2>Visualizations</h2>
 
+<img width="847" alt="github_map_example" src="https://user-images.githubusercontent.com/64094170/123292983-8fc95a80-d4e1-11eb-8422-bbeb2dd04aee.PNG">
 
+<p>Our first visualization on the home page uses Leaflet.js to display the happiness level of each country by color. When the user clicks on a country a label pops up that displays the different metrics for the selected country. 
+</p>
+
+<img width="808" alt="github_happiness_regression" src="https://user-images.githubusercontent.com/64094170/123290661-758e7d00-d4df-11eb-9dd6-3cb736f0415d.PNG">
+
+<p>On the "Happiness Score" page the user can specify the year and the value they want to regress against happiness. The plot allows the user to explore the correlation (displayed in the title), hover over the data points for the specific country and view the relationship in a scatter/line plot. Our regression plot was developed using Plotyl.js.</p>
+
+<img width="830" alt="github_happiness_over_time" src="https://user-images.githubusercontent.com/64094170/123292229-d79bb200-d4e0-11eb-8989-872da59215e0.PNG">
+Our third visualization, located on the "Happiness over time" page, displays the happiness level of the selected country over the timeframe. The 
+
+<h3>See the evolution of our project <a href="https://github.com/emmobley63/Happiness-Learning/blob/main/README.md">here</a>!</h3>
 <h2>Contact Us</h2>
 
 Evan Mobley | [Evan's LinkedIn](https://www.linkedin.com/in/evanmmobley/) | [Evan's Github](https://github.com/emmobley63) | [emmobley63@gmail.com](mailto:emmobley63@gmail.com)
