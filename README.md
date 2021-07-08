@@ -5,6 +5,8 @@
 
 <p>If you have any of these same questions, explore here! We know what you're thinking, "All these happiness questions... It sounds like a-." No, this isn't a bad drug infomercial prescribing you a drug with life debilitating side effects, it's an exploration of world happiness data. Side effects include deeper understanding of global happiness and a curiousity to explore more!</p>
 
+<img width="900" alt="Website_image" src="/Images/Website%20page.PNG">
+
 <h2>Intro</h2>
 <p>Our project creates a website interface in which the user can explore happiness levels in different countries, years, and regressed against country demographics. Our dataset came from <a href="https://www.kaggle.com/mathurinache/world-happiness-report-20152021">Kaggle Gallup World Happiness Report 2015-2021</a>. We wanted to visualize the happiness data so that the user might see more easily trends and possible explanations as to why some countries might be happier than others. Our interface allows the user to explore on their own without any inferences.
 </p>
@@ -22,16 +24,16 @@ For our country temperature measurement data (which we later decided not to use)
 
 <h2>Visualizations</h2>
 
-<img width="847" alt="github_map_example" src="https://user-images.githubusercontent.com/64094170/123292983-8fc95a80-d4e1-11eb-8422-bbeb2dd04aee.PNG">
+<img width="847" alt="github_map_example" src="/Images/github_map_example.PNG">
 
 <p>Our first visualization on the home page uses Leaflet.js to display the happiness level of each country by color. When the user clicks on a country a label pops up that displays the different metrics for the selected country. 
 </p>
 
-<img width="808" alt="github_happiness_regression" src="https://user-images.githubusercontent.com/64094170/123290661-758e7d00-d4df-11eb-9dd6-3cb736f0415d.PNG">
+<img width="808" alt="github_happiness_regression" src="/Images/github_happiness_regression.PNG">
 
 <p>On the "Happiness Score" page the user can specify the year and the value they want to regress against happiness. The plot allows the user to explore the correlation (displayed in the title), hover over the data points for the specific country and view the relationship in a scatter/line plot. Our regression plot was developed using Plotyl.js.</p>
 
-<img width="830" alt="github_happiness_over_time" src="https://user-images.githubusercontent.com/64094170/123292229-d79bb200-d4e0-11eb-8989-872da59215e0.PNG">
+<img width="830" alt="github_happiness_over_time" src="/Images/github_happiness_over_time.PNG">
 <p>Our third visualization, located on the "Happiness over time" page, displays the happiness level of the selected country over the timeframe.</p>
 <hr>
 <br>
